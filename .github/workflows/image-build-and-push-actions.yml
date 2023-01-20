@@ -32,8 +32,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: sternrassler/tekton-toolbox
-            name/app
+          images: |
+            sternrassler/tekton-toolbox
           tags: |
             type=ref,event=branch
             type=ref,event=pr
