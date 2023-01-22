@@ -55,7 +55,7 @@ jobs:
           context: .
           file: ./Dockerfile.base
           push: true
-          tags: amd64-${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}-amd64
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64 #,linux/arm64,linux/arm/v7
 
@@ -65,7 +65,7 @@ jobs:
           context: .
           file: ./Dockerfile.base
           push: true
-          tags: arm64-${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}-arm64
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/arm64 #,linux/arm/v7   
 
@@ -75,6 +75,6 @@ jobs:
           context: .
           file: ./Dockerfile.base
           push: true
-          tags: arm7-${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}-arm7
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/arm/v7
