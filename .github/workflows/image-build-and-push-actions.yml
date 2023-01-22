@@ -55,8 +55,8 @@ jobs:
           context: .
           file: ./Dockerfile.base
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: amd64-${{ steps.meta.outputs.labels }}
+          tags: amd64-${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64 #,linux/arm64,linux/arm/v7
 
       - name: Build and push Docker image
@@ -65,8 +65,8 @@ jobs:
           context: .
           file: ./Dockerfile.base
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: arm64-${{ steps.meta.outputs.labels }}
+          tags: arm64-${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/arm64 #,linux/arm/v7   
 
       - name: Build and push Docker image
@@ -75,6 +75,6 @@ jobs:
           context: .
           file: ./Dockerfile.base
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: arm7-${{ steps.meta.outputs.labels }}
+          tags: arm7-${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/arm/v7
