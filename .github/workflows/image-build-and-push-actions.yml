@@ -47,7 +47,7 @@ jobs:
           labels: |
             org.opencontainers.image.source=${{ github.event.repository.clone_url }}
             org.opencontainers.image.revision=${{ github.sha }}
-            maintainer=${{ github.actor }}
+            org.opencontainers.image.authors=${{ github.actor }}
       
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
