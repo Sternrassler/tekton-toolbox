@@ -1,4 +1,5 @@
 FROM alpine:latest
+LABEL maintainer="Ix Sternrassler (sternrassler@gmail.com)"
 
 WORKDIR /app
 
