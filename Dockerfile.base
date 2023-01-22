@@ -1,2 +1,5 @@
 FROM alpine:latest
-CMD ["echo", "Hello World"]
+
+RUN apk update && apk upgrade && apk add --no-cache git
+
+CMD ["git", "--version"]
